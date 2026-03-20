@@ -14,3 +14,15 @@
      - El segundo valor (Y) mueve verticalmente: 0% es arriba, 100% es abajo. */
   object-position: 70% 30%;
 }
+
+.animate-gradient-bg {
+  /* Hace que el gradiente sea el doble de ancho para poder "pasear" por él */
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

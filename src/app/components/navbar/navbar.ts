@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { NgClass } from '@angular/common';
 })
 export class Navbar {
   mobileMenu: boolean = false;
-
+  ts = inject(TranslationService);
   triggerNavItem(id: string) {
     this.mobileMenu = false;
     const element = document.querySelector(id);

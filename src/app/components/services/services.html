@@ -1,7 +1,7 @@
 <div class="container py-16 md:py-20 lg:py-24" id="services">
   <div class="text-center mb-16">
-    <h2 class="font-header text-4xl font-bold uppercase text-primary sm:text-5xl lg:text-6xl tracking-tight">Servicios Profesionales</h2>
-    <h4 class="mt-4 font-body text-xl font-medium text-grey-20 sm:text-2xl">Soluciones de Software de Alto Rendimiento</h4>
+    <h2 class="font-header text-4xl font-bold uppercase text-primary sm:text-5xl lg:text-6xl tracking-tight">{{ts.t().SERVICES_TITLE}}</h2>
+    <h4 class="mt-4 font-body text-xl font-medium text-grey-20 sm:text-2xl">{{ts.t().SERVICES_SUB}}</h4>
   </div>
 
   <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 max-w-5xl mx-auto">
@@ -12,10 +12,8 @@
         <i class="bx bx-code-alt text-4xl text-primary transition-colors group-hover:text-white"></i>
       </div>
       <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">Desarrollo Web Full-Stack</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20">
-          Creación de aplicaciones web escalables y robustas utilizando el ecosistema <strong>Java Spring Boot</strong> y <strong>Angular</strong> para las necesidades del negocio moderno.
-        </p>
+        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD1_TITLE}}</h3>
+        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD1_DESC"></p>
       </div>
     </div>
 
@@ -25,10 +23,8 @@
         <i class="bx bx-buildings text-4xl text-primary transition-colors group-hover:text-white"></i>
       </div>
       <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">Soluciones Empresariales (ERP/POS)</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20">
-          Desarrollo de software a medida para gestión de inventarios, sistemas de ventas locales e implementación optimizada de lógica de negocio.
-        </p>
+        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD2_TITLE}}</h3>
+        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD2_DESC"></p>
       </div>
     </div>
 
@@ -38,10 +34,8 @@
         <i class="bx bx-data text-4xl text-primary transition-colors group-hover:text-white"></i>
       </div>
       <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">Arquitectura de Bases de Datos</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20">
-          Diseño y optimización de bases de datos relacionales con <strong>PostgreSQL</strong> y <strong>MySQL</strong>, enfocado en la integridad de los datos y consultas de alta velocidad.
-        </p>
+        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD3_TITLE}}</h3>
+        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD3_DESC"></p>
       </div>
     </div>
 
@@ -51,10 +45,8 @@
         <i class="bx bx-bot text-4xl text-primary transition-colors group-hover:text-white"></i>
       </div>
       <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">Implementación de IA Local</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20">
-          Despliegue de Modelos de Lenguaje (LLMs) privados en hardware local usando <strong>Ollama</strong> para entornos de Inteligencia Artificial seguros y personalizados.
-        </p>
+        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD4_TITLE}}</h3>
+        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD4_DESC"></p>
       </div>
     </div>
 

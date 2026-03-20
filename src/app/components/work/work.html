@@ -1,6 +1,6 @@
 <div class="container py-16 md:py-20" id="work">
-  <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Proyectos</h2>
-  <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">Aquí te muestro algunos de mis proyectos</h3>
+  <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">{{ts.t().WORK_TITLE}}</h2>
+  <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">{{ts.t().WORK_SUB}}</h3>
   <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
     <span class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"></span>
     
@@ -22,11 +22,11 @@
           <div class="mt-1 flex items-start">
             <i class="bx bxs-right-arrow hidden text-primary md:block md:-mt-0.5"></i>
             <div class="md:-mt-1 md:pl-8">
-              <span class="block font-body font-medium text-grey-40">Dic 2025 - Mar 2026</span>
+              <span class="block font-body font-medium text-grey-40">{{ts.t().WORK_DATE}}</span>
               <span class="block pt-2 font-header text-lg font-bold uppercase tracking-wide text-primary lg:text-xl">JAVA &bull; ANGULAR &bull; POSTGRESQL</span>
               <div class="pt-3">
                 <p class="font-body text-base leading-relaxed text-grey-20">
-                  Creación de un sistema transaccional de inventario con tienda online integrada para mi tesis de grado. Migré la base de datos a PostgreSQL, mejorando significativamente la escalabilidad del sistema y el manejo eficiente de estructuras de datos no estructuradas.
+                  {{ts.t().WORK_DESC}}
                 </p>
               </div>
             </div>

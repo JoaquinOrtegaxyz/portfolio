@@ -1,0 +1,16 @@
+.floating-effect {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.custom-position {
+  /* Ajuste para centrar el rostro. 
+     - El primer valor (X) mueve horizontalmente: 0% es totalmente a la izquierda, 100% es a la derecha.
+     - El segundo valor (Y) mueve verticalmente: 0% es arriba, 100% es abajo. */
+  object-position: 70% 30%;
+}

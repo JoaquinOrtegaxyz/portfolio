@@ -1,4 +1,4 @@
-<div class="w-full h-screen min-h-screen flex flex-col bg-white text-slate-900 overflow-hidden m-0 p-0 relative">
+0<div class="w-full h-screen min-h-screen flex flex-col bg-white text-slate-900 overflow-hidden m-0 p-0 relative">
   
   <!-- Header / Navbar spanning 100% width -->
   <app-navbar class="w-full shrink-0 z-50"></app-navbar>
@@ -31,6 +31,11 @@
         @case ('work') {
           <div class="animate-tab-change w-full flex-1 flex flex-col">
             <app-work class="w-full flex-1 flex flex-col"></app-work>
+          </div>
+        }
+        @case ('statistics') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-statistics class="w-full flex-1 flex flex-col"></app-statistics>
           </div>
         }
         @case ('contact') {

@@ -1,54 +1,56 @@
-<div class="container py-16 md:py-20 lg:py-24" id="services">
-  <div class="text-center mb-16">
-    <h2 class="font-header text-4xl font-bold uppercase text-primary sm:text-5xl lg:text-6xl tracking-tight">{{ts.t().SERVICES_TITLE}}</h2>
-    <h4 class="mt-4 font-body text-xl font-medium text-grey-20 sm:text-2xl">{{ts.t().SERVICES_SUB}}</h4>
-  </div>
-
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 max-w-5xl mx-auto">
-    
-    <!-- Desarrollo Web Full-Stack -->
-    <div class="group relative rounded-xl bg-white px-8 py-10 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
-      <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
-        <i class="bx bx-code-alt text-4xl text-primary transition-colors group-hover:text-white"></i>
-      </div>
-      <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD1_TITLE}}</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD1_DESC"></p>
-      </div>
+<div class="w-full h-full min-h-[calc(100vh-120px)] flex flex-col justify-center items-center py-8 sm:py-12 bg-white" id="services">
+  <div class="container my-auto">
+    <div class="text-center mb-10">
+      <h2 class="font-header text-3xl font-bold uppercase text-primary sm:text-4xl lg:text-5xl tracking-tight">{{ts.t().SERVICES_TITLE}}</h2>
+      <h4 class="mt-2 font-body text-lg font-medium text-grey-20 sm:text-xl">{{ts.t().SERVICES_SUB}}</h4>
     </div>
 
-    <!-- Soluciones Empresariales -->
-    <div class="group relative rounded-xl bg-white px-8 py-10 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
-      <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
-        <i class="bx bx-buildings text-4xl text-primary transition-colors group-hover:text-white"></i>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-5xl mx-auto">
+      
+      <!-- Desarrollo Web Full-Stack -->
+      <div class="group relative rounded-xl bg-white px-6 py-8 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
+          <i class="bx bx-code-alt text-3xl text-primary transition-colors group-hover:text-white"></i>
+        </div>
+        <div class="text-center">
+          <h3 class="mb-3 font-header text-base font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD1_TITLE}}</h3>
+          <p class="font-body text-xs sm:text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD1_DESC"></p>
+        </div>
       </div>
-      <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD2_TITLE}}</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD2_DESC"></p>
-      </div>
-    </div>
 
-    <!-- Arquitectura de BD -->
-    <div class="group relative rounded-xl bg-white px-8 py-10 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
-      <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
-        <i class="bx bx-data text-4xl text-primary transition-colors group-hover:text-white"></i>
+      <!-- Soluciones Empresariales -->
+      <div class="group relative rounded-xl bg-white px-6 py-8 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
+          <i class="bx bx-buildings text-3xl text-primary transition-colors group-hover:text-white"></i>
+        </div>
+        <div class="text-center">
+          <h3 class="mb-3 font-header text-base font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD2_TITLE}}</h3>
+          <p class="font-body text-xs sm:text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD2_DESC"></p>
+        </div>
       </div>
-      <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD3_TITLE}}</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD3_DESC"></p>
-      </div>
-    </div>
 
-    <!-- IA Local -->
-    <div class="group relative rounded-xl bg-white px-8 py-10 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
-      <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
-        <i class="bx bx-bot text-4xl text-primary transition-colors group-hover:text-white"></i>
+      <!-- Arquitectura de BD -->
+      <div class="group relative rounded-xl bg-white px-6 py-8 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
+          <i class="bx bx-data text-3xl text-primary transition-colors group-hover:text-white"></i>
+        </div>
+        <div class="text-center">
+          <h3 class="mb-3 font-header text-base font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD3_TITLE}}</h3>
+          <p class="font-body text-xs sm:text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD3_DESC"></p>
+        </div>
       </div>
-      <div class="text-center">
-        <h3 class="mb-4 font-header text-lg font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD4_TITLE}}</h3>
-        <p class="font-body text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD4_DESC"></p>
-      </div>
-    </div>
 
+      <!-- IA Local -->
+      <div class="group relative rounded-xl bg-white px-6 py-8 shadow-lg border border-grey-60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary">
+          <i class="bx bx-bot text-3xl text-primary transition-colors group-hover:text-white"></i>
+        </div>
+        <div class="text-center">
+          <h3 class="mb-3 font-header text-base font-bold uppercase text-secondary">{{ts.t().SERVICES_CARD4_TITLE}}</h3>
+          <p class="font-body text-xs sm:text-sm leading-relaxed text-grey-20" [innerHTML]="ts.t().SERVICES_CARD4_DESC"></p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>

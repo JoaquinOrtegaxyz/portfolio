@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TranslationService } from '../../services/translation.service';
+import { NavigationService, NavTab } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +11,10 @@ import { TranslationService } from '../../services/translation.service';
 export class Navbar {
   mobileMenu: boolean = false;
   ts = inject(TranslationService);
-  triggerNavItem(id: string) {
+  nav = inject(NavigationService);
+
+  selectTab(tab: NavTab) {
     this.mobileMenu = false;
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.nav.setTab(tab);
   }
 }

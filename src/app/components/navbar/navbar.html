@@ -1,40 +1,106 @@
-<div class="w-full z-50 top-0 py-3 sm:py-5 absolute">
+<div class="w-full bg-primary z-50 py-3 sm:py-4 shadow-md sticky top-0 border-b border-white/10">
   <div class="container flex items-center justify-between">
-    <div>
-      <button (click)="ts.toggleLanguage()" class="z-50 cursor-pointer rounded-full border border-white/50 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white hover:text-primary hover:shadow-lg sm:text-sm">
+    <div class="flex items-center gap-3">
+      <!-- Logo/Home Button -->
+      <button (click)="selectTab('hero')" class="flex items-center gap-2 text-white font-header font-bold text-lg hover:text-yellow transition-colors">
+        <i class="bx bx-home-alt text-2xl text-yellow"></i>
+        <span>HOME</span>
+      </button>
+
+      <!-- Language Toggle -->
+      <button (click)="ts.toggleLanguage()" class="ml-2 z-50 cursor-pointer rounded-full border border-white/50 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm backdrop-blur-sm transition-all hover:bg-white hover:text-primary sm:text-sm">
         <i class="bx bx-world relative top-0.5 mr-1 text-base"></i> {{ts.t().TOGGLE_LANG}}
       </button>
     </div>
+
+    <!-- Desktop Navigation -->
     <div class="hidden lg:block">
-      <ul class="flex items-center">
-        <li class="group pl-6"><span (click)="triggerNavItem('#about')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_ABOUT}}</span><span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span></li>
-        <li class="group pl-6"><span (click)="triggerNavItem('#services')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_SERVICES}}</span><span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span></li>
-        <li class="group pl-6"><span (click)="triggerNavItem('#portfolio')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_PORTFOLIO}}</span><span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span></li>
-        <li class="group pl-6"><span (click)="triggerNavItem('#work')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_WORK}}</span><span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span></li>
-        <li class="group pl-6"><span (click)="triggerNavItem('#statistics')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_STATISTICS}}</span><span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span></li>
-        <li class="group pl-6"><span (click)="triggerNavItem('#contact')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_CONTACT}}</span><span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span></li>
+      <ul class="flex items-center gap-6">
+        <li class="group">
+          <button (click)="selectTab('hero')" class="cursor-pointer font-header font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'hero' ? 'text-yellow' : 'text-white hover:text-yellow'">
+            HOME
+          </button>
+          <span class="block h-0.5 w-full bg-transparent transition-colors" [ngClass]="nav.activeTab() === 'hero' ? 'bg-yellow' : 'group-hover:bg-yellow'"></span>
+        </li>
+        <li class="group">
+          <button (click)="selectTab('about')" class="cursor-pointer font-header font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'about' ? 'text-yellow' : 'text-white hover:text-yellow'">
+            {{ts.t().NAV_ABOUT}}
+          </button>
+          <span class="block h-0.5 w-full bg-transparent transition-colors" [ngClass]="nav.activeTab() === 'about' ? 'bg-yellow' : 'group-hover:bg-yellow'"></span>
+        </li>
+        <li class="group">
+          <button (click)="selectTab('services')" class="cursor-pointer font-header font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'services' ? 'text-yellow' : 'text-white hover:text-yellow'">
+            {{ts.t().NAV_SERVICES}}
+          </button>
+          <span class="block h-0.5 w-full bg-transparent transition-colors" [ngClass]="nav.activeTab() === 'services' ? 'bg-yellow' : 'group-hover:bg-yellow'"></span>
+        </li>
+        <li class="group">
+          <button (click)="selectTab('portfolio')" class="cursor-pointer font-header font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'portfolio' ? 'text-yellow' : 'text-white hover:text-yellow'">
+            {{ts.t().NAV_PORTFOLIO}}
+          </button>
+          <span class="block h-0.5 w-full bg-transparent transition-colors" [ngClass]="nav.activeTab() === 'portfolio' ? 'bg-yellow' : 'group-hover:bg-yellow'"></span>
+        </li>
+        <li class="group">
+          <button (click)="selectTab('work')" class="cursor-pointer font-header font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'work' ? 'text-yellow' : 'text-white hover:text-yellow'">
+            {{ts.t().NAV_WORK}}
+          </button>
+          <span class="block h-0.5 w-full bg-transparent transition-colors" [ngClass]="nav.activeTab() === 'work' ? 'bg-yellow' : 'group-hover:bg-yellow'"></span>
+        </li>
+        <li class="group">
+          <button (click)="selectTab('contact')" class="cursor-pointer font-header font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'contact' ? 'text-yellow' : 'text-white hover:text-yellow'">
+            {{ts.t().NAV_CONTACT}}
+          </button>
+          <span class="block h-0.5 w-full bg-transparent transition-colors" [ngClass]="nav.activeTab() === 'contact' ? 'bg-yellow' : 'group-hover:bg-yellow'"></span>
+        </li>
       </ul>
     </div>
+
+    <!-- Mobile Menu Button -->
     <div class="block lg:hidden">
-      <button (click)="mobileMenu = true">
-        <i class="bx bx-menu text-4xl text-white"></i>
+      <button (click)="mobileMenu = true" class="text-white hover:text-yellow focus:outline-none">
+        <i class="bx bx-menu text-3xl"></i>
       </button>
     </div>
   </div>
 </div>
 
-<div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" [ngClass]="{ 'opacity-100 pointer-events-auto': mobileMenu }">
-  <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
-    <button class="absolute top-0 right-0 mt-4 mr-4" (click)="mobileMenu = false">
-  <i class="bx bx-x text-5xl text-white hover:text-yellow transition-colors"></i>
-</button>
-    <ul class="mt-8 flex flex-col">
-      <li class="py-2"><span (click)="triggerNavItem('#about')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_ABOUT}}</span></li>
-      <li class="py-2"><span (click)="triggerNavItem('#services')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_SERVICES}}</span></li>
-      <li class="py-2"><span (click)="triggerNavItem('#portfolio')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_PORTFOLIO}}</span></li>
-      <li class="py-2"><span (click)="triggerNavItem('#work')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_WORK}}</span></li>
-      <li class="py-2"><span (click)="triggerNavItem('#statistics')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_STATISTICS}}</span></li>
-      <li class="py-2"><span (click)="triggerNavItem('#contact')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">{{ts.t().NAV_CONTACT}}</span></li>
+<!-- Mobile Navigation Drawer -->
+<div class="pointer-events-none fixed inset-0 z-50 bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" [ngClass]="{ 'opacity-100 pointer-events-auto': mobileMenu }">
+  <div class="absolute right-0 min-h-screen w-3/4 max-w-xs bg-primary py-6 px-6 shadow-2xl">
+    <button class="absolute top-4 right-4 text-white hover:text-yellow transition-colors" (click)="mobileMenu = false">
+      <i class="bx bx-x text-4xl"></i>
+    </button>
+    <ul class="mt-12 flex flex-col gap-4">
+      <li>
+        <button (click)="selectTab('hero')" class="w-full text-left font-header text-lg font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'hero' ? 'text-yellow' : 'text-white'">
+          HOME
+        </button>
+      </li>
+      <li>
+        <button (click)="selectTab('about')" class="w-full text-left font-header text-lg font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'about' ? 'text-yellow' : 'text-white'">
+          {{ts.t().NAV_ABOUT}}
+        </button>
+      </li>
+      <li>
+        <button (click)="selectTab('services')" class="w-full text-left font-header text-lg font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'services' ? 'text-yellow' : 'text-white'">
+          {{ts.t().NAV_SERVICES}}
+        </button>
+      </li>
+      <li>
+        <button (click)="selectTab('portfolio')" class="w-full text-left font-header text-lg font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'portfolio' ? 'text-yellow' : 'text-white'">
+          {{ts.t().NAV_PORTFOLIO}}
+        </button>
+      </li>
+      <li>
+        <button (click)="selectTab('work')" class="w-full text-left font-header text-lg font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'work' ? 'text-yellow' : 'text-white'">
+          {{ts.t().NAV_WORK}}
+        </button>
+      </li>
+      <li>
+        <button (click)="selectTab('contact')" class="w-full text-left font-header text-lg font-semibold uppercase transition-colors" [ngClass]="nav.activeTab() === 'contact' ? 'text-yellow' : 'text-white'">
+          {{ts.t().NAV_CONTACT}}
+        </button>
+      </li>
     </ul>
   </div>
 </div>

@@ -1,13 +1,15 @@
-<div class="container py-16 md:py-20" id="contact">
-  <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">{{ts.t().CONTACT_TITLE}}</h2>
-  <form class="mx-auto w-full pt-10 sm:w-3/4">
-    <div class="flex flex-col md:flex-row">
-      <input class="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5" [placeholder]="ts.t().CONTACT_PLACEHOLDER_NAME" type="text" id="name" />
-      <input class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5" placeholder="Email" type="text" id="email" />
-    </div>
-    <textarea class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8" [placeholder]="ts.t().CONTACT_PLACEHOLDER_MSG" id="message" cols="30" rows="10"></textarea>
-    <button class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20">
-      {{ts.t().CONTACT_SEND}} <i class="bx bx-chevron-right relative -right-2 text-3xl"></i>
-    </button>
-  </form>
+<div class="w-full h-full min-h-[calc(100vh-120px)] flex flex-col justify-center items-center py-8 sm:py-12 bg-white" id="contact">
+  <div class="container my-auto max-w-3xl">
+    <h2 class="text-center font-header text-3xl font-semibold uppercase text-primary sm:text-4xl lg:text-5xl">{{ts.t().CONTACT_TITLE}}</h2>
+    <form class="mx-auto w-full pt-6 sm:pt-8">
+      <div class="flex flex-col md:flex-row gap-4">
+        <input class="w-full rounded border border-grey-70 px-4 py-3 font-body text-black md:w-1/2 focus:outline-none focus:border-primary" [placeholder]="ts.t().CONTACT_PLACEHOLDER_NAME" type="text" id="name" />
+        <input class="w-full rounded border border-grey-70 px-4 py-3 font-body text-black md:w-1/2 focus:outline-none focus:border-primary" placeholder="Email" type="email" id="email" />
+      </div>
+      <textarea class="mt-4 w-full rounded border border-grey-70 px-4 py-3 font-body text-black focus:outline-none focus:border-primary" [placeholder]="ts.t().CONTACT_PLACEHOLDER_MSG" id="message" rows="5"></textarea>
+      <button type="button" class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-base font-bold uppercase text-white hover:bg-secondary transition-colors cursor-pointer">
+        {{ts.t().CONTACT_SEND}} <i class="bx bx-chevron-right relative -right-1 text-2xl"></i>
+      </button>
+    </form>
+  </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { NavigationService } from './services/navigation.service';
 
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
@@ -7,14 +8,14 @@ import { Services } from './components/services/services';
 import { Portfolio } from './components/portfolio/portfolio';
 import { Footer } from './components/footer/footer';
 import { Contact } from './components/contact/contact';
-import { Statistics } from './components/statistics/statistics';
 import { Work } from './components/work/work';
+
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Services, Portfolio, Footer, Contact, Statistics, Work],
+  imports: [Navbar, Hero, About, Services, Portfolio, Footer, Contact, Work],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('portfolio');
+  nav = inject(NavigationService);
 }

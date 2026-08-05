@@ -1,11 +1,49 @@
-<div class="relative">
-  <app-navbar></app-navbar>
-  <app-hero></app-hero>
-  <app-about></app-about>
-  <app-services></app-services>
-  <app-portfolio></app-portfolio>
-  <app-work></app-work>
-  <app-statistics></app-statistics>
-  <app-contact></app-contact>
-  <app-footer></app-footer>
+<div class="w-full h-screen min-h-screen flex flex-col bg-white text-slate-900 overflow-hidden m-0 p-0 relative">
+  
+  <!-- Header / Navbar spanning 100% width -->
+  <app-navbar class="w-full shrink-0 z-50"></app-navbar>
+
+  <!-- Main Content Viewport spanning full remaining screen height -->
+  <main class="flex-1 w-full overflow-y-auto custom-scrollbar flex flex-col justify-between relative">
+    
+    <div class="flex-1 w-full flex flex-col">
+      @switch (nav.activeTab()) {
+        @case ('hero') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-hero class="w-full flex-1 flex flex-col"></app-hero>
+          </div>
+        }
+        @case ('about') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-about class="w-full flex-1 flex flex-col"></app-about>
+          </div>
+        }
+        @case ('services') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-services class="w-full flex-1 flex flex-col"></app-services>
+          </div>
+        }
+        @case ('portfolio') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-portfolio class="w-full flex-1 flex flex-col"></app-portfolio>
+          </div>
+        }
+        @case ('work') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-work class="w-full flex-1 flex flex-col"></app-work>
+          </div>
+        }
+        @case ('contact') {
+          <div class="animate-tab-change w-full flex-1 flex flex-col">
+            <app-contact class="w-full flex-1 flex flex-col"></app-contact>
+          </div>
+        }
+      }
+    </div>
+
+    <!-- Footer at the bottom -->
+    <app-footer class="w-full shrink-0"></app-footer>
+
+  </main>
+
 </div>
